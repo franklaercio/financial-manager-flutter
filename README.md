@@ -21,7 +21,7 @@
   </a>
 </p>
 
-# :trophy: Finacial Manager
+# :moneybag: Finacial Manager
 
 Under development
 
