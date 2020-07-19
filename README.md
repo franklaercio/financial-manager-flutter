@@ -23,7 +23,7 @@
 
 # :moneybag: Finacial Manager
 
-This is a app for finances manager your personal spendings. In this app it's possible add your spending by date, remove spending and to view a chart with spending in the last week.
+This is an app for finances manager your personal. In this app it's possible add your spending by date, remove spending and to view a chart with spending in the last week.
 
 <p>
 <img src="assets/images/print_screen_1.jpeg" width="200">  <img src="assets/images/print_screen_2.jpeg" width="200">  <img src="assets/images/print_screen_3.jpeg" width="200"> <img src="assets/images/print_screen_4.jpeg" width="200">
@@ -37,7 +37,7 @@ For started you need install [Flutter](https://flutter.dev/docs/get-started/inst
 
 Befere download app and install Flutter, you need connect one mobile device and execute these commands in your terminal:
 
-```flutter pub get```
+```flutter pub get``` <br /><br />
 ```flutter run```
 
 ## :family: Contributing
