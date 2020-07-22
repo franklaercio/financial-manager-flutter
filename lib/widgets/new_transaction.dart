@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
+import './adaptative_flat_button.dart';
 
 class NewTransaction extends StatefulWidget {
   final Function addTx;
@@ -92,16 +95,7 @@ class _NewTransactionState extends State<NewTransaction> {
                               DateFormat.yMd().format(_selectedDate),
                     ),
                   ),
-                  FlatButton(
-                    onPressed: _presentDatePicker,
-                    child: Text(
-                      'Choose Date',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Theme.of(context).primaryColor),
-                    ),
-                    textColor: Theme.of(context).primaryColor,
-                  ),
+                  AdaptativeButton('Choose Date', _presentDatePicker),
                 ],
               ),
               RaisedButton(

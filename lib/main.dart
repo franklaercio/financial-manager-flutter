@@ -148,30 +148,35 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Chart(_recentTransactions),
     );
 
-    final pageBody = SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          if (isLandscape)
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text('Show Chart'),
-                Switch.adaptive(
-                  activeColor: Theme.of(context).accentColor,
-                  value: _showChart,
-                  onChanged: (val) {
-                    setState(() {
-                      _showChart = val;
-                    });
-                  },
-                )
-              ],
-            ),
-          if (!isLandscape) chartWidget,
-          if (!isLandscape) txListWidget,
-          if (isLandscape) _showChart ? chartWidget : txListWidget,
-        ],
+    final pageBody = SafeArea(
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            if (isLandscape)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    'Show Chart',
+                    style: Theme.of(context).textTheme.title,
+                  ),
+                  Switch.adaptive(
+                    activeColor: Theme.of(context).accentColor,
+                    value: _showChart,
+                    onChanged: (val) {
+                      setState(() {
+                        _showChart = val;
+                      });
+                    },
+                  )
+                ],
+              ),
+            if (!isLandscape) chartWidget,
+            if (!isLandscape) txListWidget,
+            if (isLandscape) _showChart ? chartWidget : txListWidget,
+          ],
+        ),
       ),
     );
 
