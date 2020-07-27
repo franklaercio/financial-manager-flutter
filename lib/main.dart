@@ -53,7 +53,7 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   final List<Transaction> transactions = [];
 
   final titleController = TextEditingController();
@@ -70,6 +70,24 @@ class _MyHomePageState extends State<MyHomePage> {
         Duration(days: 7),
       ));
     }).toList();
+  }
+
+  //Lifecycle initState > didChangeAppLifecycleState > dispose
+  @override
+  void initState() {
+    WidgetsBinding.instance.addObserver(this);
+    super.initState();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    print(state);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
   }
 
   void _addNewTransaction(String txTitle, double txAmount, DateTime txDate) {
