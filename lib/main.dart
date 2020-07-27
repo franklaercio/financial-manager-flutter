@@ -112,21 +112,21 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final PreferredSizeWidget appBar = Platform.isIOS
         ? CupertinoNavigationBar(
-            middle: Text('Finacial Manager'),
+            middle: const Text('Finacial Manager'),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 GestureDetector(
                     onTap: () => _startAddNewTransaction(context),
-                    child: Icon(CupertinoIcons.add)),
+                    child: const Icon(CupertinoIcons.add)),
               ],
             ),
           )
         : AppBar(
-            title: Text('Finacial Manager'),
+            title: const Text('Finacial Manager'),
             actions: <Widget>[
               IconButton(
-                icon: Icon(Icons.add),
+                icon: const Icon(Icons.add),
                 onPressed: () => _startAddNewTransaction(context),
               )
             ],
