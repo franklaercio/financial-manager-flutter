@@ -21,7 +21,7 @@
   </a>
 </p>
 
-# :moneybag: Finacial Manager
+## :bookmark_tabs: Resume of application
 
 This is an app for finances manager your personal. In this app it's possible add your spending by date, remove spending and to view a chart with spending in the last week.
 
